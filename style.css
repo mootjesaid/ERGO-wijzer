@@ -146,11 +146,12 @@ header:before{
     transform-style: inherit;
     width: 100%;
     text-align: center;
-    color: white;
+    color: black;
 }
 .page3 h1{
     margin-top: 100px;
     text-align: center;
+    color: dodgerblue;
 
 
 }
@@ -165,7 +166,6 @@ header:before{
     right: 0;
     top: 0;
     display: block;
-    background: red;
     background-size: cover;
     transform-origin: center center 0;
     transform: translateZ(-1px) scale(2);
@@ -181,6 +181,8 @@ header:before{
     width: 100%;
     text-align: center;
     color: white;
+
+
 }
 .page4 h1{
     margin-top: 100px;
@@ -362,4 +364,8 @@ body {font-family: Verdana, sans-serif; margin:0}
     color: white;
     font-size: 3vh;
 
+}
+sub2{
+    color: black;
+    font-size: 3vh;
 }
