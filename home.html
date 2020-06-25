@@ -5,29 +5,101 @@
         <title>Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="script" href="java.js">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+        <title>CodePen - Back to Top Button</title>
+        <style>
+            #button {
+                display: inline-block;
+                background-color: #FF9800;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                border-radius: 4px;
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                transition: background-color .3s,
+                opacity .5s, visibility .5s;
+                opacity: 0;
+                visibility: hidden;
+                z-index: 1000;
+            }
+            #button::after {
+                content: "\f077";
+                font-family: FontAwesome;
+                font-weight: normal;
+                font-style: normal;
+                font-size: 2em;
+                line-height: 50px;
+                color: #fff;
+            }
+            #button:hover {
+                cursor: pointer;
+                background-color: #333;
+            }
+            #button:active {
+                background-color: #555;
+            }
+            #button.show {
+                opacity: 1;
+                visibility: visible;
+            }
 
+            /* Styles for the content section */
+
+            .content {
+                width: 77%;
+                margin: 50px auto;
+                font-family: 'Merriweather', serif;
+                font-size: 17px;
+                color: #6c767a;
+                line-height: 1.9;
+            }
+            @media (min-width: 500px) {
+                .content {
+                    width: 43%;
+                }
+                #button {
+                    margin: 30px;
+                }
+            }
+            .content h1 {
+                margin-bottom: -10px;
+                color: #03a9f4;
+                line-height: 1.5;
+            }
+            .content h3 {
+                font-style: italic;
+                color: #96a2a7;
+            }
+        </style>
+        <script>
+            window.console = window.console || function(t) {};
+        </script>
+        <script>
+            if (document.location.search.match(/type=embed/gi)) {
+                window.parent.postMessage("resize", "*");
+            }
+        </script>
     </head>
+
+
     <body>
-        <a href="#" class="to-top">
-            <i class="fas fa-chevron-up"></i>
-        </a>
-        <div class="topnav" id="myTopnav">
-            <a><h3>ERGO wijzer</h3></a>
-            <a href="javascript:void(0)">Introductie</a>
-            <a href="javascript:void(0)">Wat is RSI?</a>
-            <a href="javascript:void(0)">Drie stadia</a>
-            <a href="javascript:void(0)">Geschiedenis</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+
+    <a id="button"></a>
 
 
         <div class="page1">
+
             <h2 style="color:rgb(108,42,232)">ERGO WIJZER</h2>
-            <h5>Hier kun je informatie over je spier en gewrichtsklachten vinden<br></h5>
+            <p class="sub3"><h5>Hier kun je informatie over je spier en gewrichtsklachten vinden<br></h5></p>
                <div id="video">
                 <iframe id="ViostreamIframe"
                         width="100%" height="100%"
@@ -36,7 +108,6 @@
                         style="position:absolute; top:0; left: 0"></iframe>
                </div>
             </div>
-
         <div class="page2" style="margin-top: 100vh">
             <h1>Introductie</h1>
 
@@ -190,21 +261,25 @@
                 <span class="dot" onclick="currentSlide4(3)"></span>
             </div>
         </div>
-
-        <div class="page5" style="margin-top: 100vh">
-            <h1>Werk organisatie</h1>
-           <p>Een goede inhoud en organisatie van het werk zijn essentieel om klachten te voorkomen. Bevorder een goede tijdsbesteding bij beeldschermwerk door:
-            Zoveel mogelijk afwisseling met niet-beeldschermwerk.
-            Nooit langer dan 5 tot 6 uur per dag achter de computer te zitten.
-            Tenminste na elke 2 uur beeldschermwerk afwisseling te zoeken door ander werk te doen of een pauze te nemen.
-            Bij intensief beeldschermwerk regelmatiger, bij voorkeur iedere 5 – 10 minuten micropauzes van circa 20 seconden in te bouwen.
-            Vermijd grote werkdruk en piekdrukte door goed te plannen: stress bevordert een gespannen werkhouding.
-            Als je thuiswerkt:
-            Opgeteld bij vergelijkbaar werk op de werkvloer van in totaal langer dan 2 uur per dag
-            Aan dezelfde eisen voldoen als de eisen die gelden voor beeldschermwerk op kantoor.
-               Zorg ook dan voor een goede werkplek</p>
-        </div>
-        <a id="back2Top" title="Back to top" href="#">&#10148;</a>
         <script src="java.js"></script>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script id="rendered-js">
+        var btn = $('#button');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+        //# sourceURL=pen.js
+    </script>
     </body>
 </html>
