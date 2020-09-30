@@ -8,86 +8,72 @@ body {
     padding: 0;
     perspective: 1px;
     font-family: Arial, Helvetica, sans-serif;
-    transform-style: preserve-3d;
     height: 133%;
-    overflow-y: scroll;
-    overflow-x: hidden;
+
 }
+
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+    display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    background: rgb(213,227,228);
+    opacity: 90%;
+    font-family: "Gilroy ExtraBold";
+    color:rgb(99,55,226) ;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    color: black;
+    margin-top: 10vh;
+    background: none;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+    color: black;
+}
+
+#myLinks{
+    margin-top: 8vh;
+}
+
+.navbar{
+    display: none;
+}
+
 
 #video{
     padding-bottom:56.25%;
     position:relative;
     display:block;
 }
-
-
-#button {
-    display: inline-block;
-    background-color: #FF9800;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 4px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    transition: background-color .3s,
-    opacity .5s, visibility .5s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
+.pages{
+    transform-style: preserve-3d;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 150vh;
+    margin-top: -8.2vh;
 }
-#button::after {
-    content: "\f077";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 2em;
-    line-height: 50px;
-    color: #fff;
-}
-#button:hover {
-    cursor: pointer;
-    background-color: #333;
-}
-#button:active {
-    background-color: #555;
-}
-#button.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Styles for the content section */
-
-.content {
-    width: 77%;
-    margin: 50px auto;
-    font-family: 'Merriweather', serif;
-    font-size: 17px;
-    color: #6c767a;
-    line-height: 1.9;
-}
-@media (min-width: 500px) {
-    .content {
-        width: 43%;
-    }
-    #button {
-        margin: 30px;
-    }
-}
-.content h1 {
-    margin-bottom: -10px;
-    color: #03a9f4;
-    line-height: 1.5;
-}
-.content h3 {
-    font-style: italic;
-    color: #96a2a7;
-}
-
-
-
 .page1{
     box-sizing: border-box;
     min-height: 100vh;
@@ -100,6 +86,7 @@ body {
     font-family: "Gilroy ExtraBold";
     z-index: 0;
 }
+
 .page1 h1{
     margin-top: -7vh;
     text-align: center;
@@ -109,7 +96,7 @@ body {
     background: 50% 50% / cover;
 }
 .page1:before{
-    bottom: -36vh;
+    bottom: 0;
     content: "";
     left: 0;
     position: absolute;
@@ -136,7 +123,7 @@ body {
     font-family: "Gilroy ExtraBold";
 }
 .page2 h1{
-    margin-top: 23vh;
+    margin-top: -2vh;
     text-align: center;
     color: rgb(53,250,243);
 }
@@ -144,7 +131,7 @@ body {
     background: 50% 50% / cover;
 }
 .page2:before{
-    bottom: -33vh;
+    bottom: 0;
     content: "";
     left: 0;
     position: absolute;
@@ -173,6 +160,7 @@ body {
     margin-top: -12vh;
     font-size: 1.62vh;
     color: white;
+    margin-left: 1.5vh;
 }
 
 
@@ -189,7 +177,7 @@ body {
 
 }
 .page3 h1{
-    margin-top: 23vh;
+    margin-top: 1vh;
     text-align: center;
     color: rgb(108,42,232);
 
@@ -199,7 +187,7 @@ body {
     background: 50% 50% / cover;
 }
 .page3:before{
-    bottom: -33vh;
+    bottom: 0;
     content: "";
     left: 0;
     position: absolute;
@@ -225,7 +213,7 @@ body {
     height: 50vh;
     margin-top: -12vh;
     font-size: 1.8vh;
-    margin-left: -5.5vh;
+    margin-left: 1.5vh;
     color: black;
 }
 
@@ -241,14 +229,14 @@ body {
     font-family: "Gilroy ExtraBold";
 }
 .page4 h1{
-    margin-top: 23vh;
+    margin-top: 20vh;
     text-align: center;
 }
 .page4, .page4:before {
     background: 50% 50% / cover;
 }
 .page4:before{
-    bottom: 0.1vh;
+    bottom: 0;
     content: "";
     left: 0;
     position: absolute;
@@ -260,6 +248,7 @@ body {
     transform-origin: center center 0;
     transform: translateZ(-1px) scale(2);
     z-index: -1;
+
 }
 
 .sub4{
@@ -274,7 +263,7 @@ body {
     height: 50vh;
     margin-top: -11.5vh;
     font-size: 1.8vh;
-    margin-left: -5.5vh;
+    margin-left: 1.5vh;
     color: white;
 
 }
@@ -288,26 +277,24 @@ img{
 
 .page5{
     box-sizing: border-box;
-    min-height: 100%;
+    min-height: 100vh;
     padding: 30vw 0 5vw;
     position: relative;
     transform-style: inherit;
     width: 100%;
     text-align: center;
-    color:rgb(108,42,232) ;
-
-
+    color: rgb(108,42,232);
+    font-family: "Gilroy ExtraBold";
 }
 .page5 h1{
     margin-top: 100px;
     text-align: center;
-
-
+    color: rgb(108,42,232);
 }
 .page5, .page5:before {
     background: 50% 50% / cover;
 }
-.page5:before{
+.page5:before {
     bottom: 0;
     content: "";
     left: 0;
@@ -315,13 +302,28 @@ img{
     right: 0;
     top: 0;
     display: block;
-    background:  rgb(213,227,228);
+    background: rgb(213,227,228);
     background-size: cover;
     transform-origin: center center 0;
     transform: translateZ(-1px) scale(2);
     z-index: -1;
-
 }
+
+.sub5{
+    color: rgb(108,42,232);
+    font-size: 3vh;
+}
+.slides5{
+    display: none;
+    padding: 80px;
+    text-align: left;
+    height: 50vh;
+    margin-top: -12vh;
+    font-size: 1.8vh;
+    margin-left: 1.5vh;
+    color: black;
+}
+
 #Container{
     margin-top: 20px;
 }
@@ -341,24 +343,24 @@ body {font-family: Verdana, sans-serif; margin:0}
     top: 50%;
     width: auto;
     margin-top: -30px;
-    padding: 16px;
-    color: #888;
+    padding: 6px;
+    color: white;
     font-weight: bold;
     font-size: 20px;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    right: 75vh;
 }
 
 /* Position the "next button" to the right */
 .next {
     position: absolute;
-    right: 0;
+    right: 3vh;
     border-radius: 3px 0 0 3px;
+    margin-left: 18vh;
 }
 .prev {
     position: absolute;
-    left: 0;
+    left: 3vh;
     border-radius: 3px 0 0 3px;
 }
 
@@ -402,11 +404,62 @@ body {font-family: Verdana, sans-serif; margin:0}
     text-align: left;
     padding-left: 9vw;
     color: black;
+}
 
+#myBtn {
+    display: block; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 28vh; /* Place the button at the bottom of the page */
+    right: 2vh; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: black; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
 }
 /*-----------------------------------------------------------------------------*/
-@media screen and (min-width: 768px){
-    .page1{
+@media screen and (min-width: 768px) {
+
+    /* The navigation bar */
+    .navbar {
+        overflow: hidden;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+        z-index: 10;
+    }
+
+    /* Links inside the navbar */
+    .navbar a {
+        float: left;
+        display: block;
+        color: gray;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /* Change background on mouse-over */
+    .navbar a:hover {
+
+        color: white;
+    }
+
+    /* Main content */
+    .main {
+        margin-top: 30px; /* Add a top margin to avoid content overlay */
+    }
+
+
+    .page1 {
         box-sizing: border-box;
         min-height: 00vh;
         height: 100vh;
@@ -419,23 +472,27 @@ body {font-family: Verdana, sans-serif; margin:0}
         margin-bottom: 10vh;
     }
 
-    .page1 h1{
+    .page1 h1 {
         margin-top: -40vh;
         text-align: center;
     }
 
-    iframe{
+    .page1 h2{
+        margin-top: 20vh;
+    }
+
+    iframe {
         width: 70%;
         height: 40%;
         padding-left: 30%;
         padding-top: 4vh;
     }
 
-    .page2{
+    .page2 {
         box-sizing: border-box;
         min-height: 100vh;
-        width: 50%;
-        height: 105vh;
+        width: 100%;
+        height: 100vh;
         padding: 2vw 0 5vw;
         position: relative;
         transform-style: inherit;
@@ -443,21 +500,23 @@ body {font-family: Verdana, sans-serif; margin:0}
         text-align: center;
         padding-left: 10vw;
     }
-    .page2 h1{
-        margin-top: 10vh;
+
+    .page2 h1 {
+        margin-top: 20vh;
         text-align: center;
     }
 
-    .slide2{
+
+    .slide2 {
         padding-top: 10vw;
         width: 60%;
 
     }
-    .page3{
+
+    .page3 {
         box-sizing: border-box;
         min-height: 100vh;
-        width: 50%;
-        height: 105vh;
+        height: 100vh;
         padding: 2vw 0 5vw;
         position: relative;
         transform-style: inherit;
@@ -467,8 +526,9 @@ body {font-family: Verdana, sans-serif; margin:0}
 
 
     }
-    .page3 h1{
-        margin-top: 10vh;
+
+    .page3 h1 {
+        margin-top: 20vh;
         text-align: center;
 
 
@@ -480,11 +540,10 @@ body {font-family: Verdana, sans-serif; margin:0}
 
     }
 
-    .page4{
+    .page4 {
         box-sizing: border-box;
         min-height: 100vh;
-        width: 50%;
-        height: 105vh;
+        height: 100vh;
         padding: 2vw 0 5vw;
         position: relative;
         transform-style: inherit;
@@ -494,8 +553,9 @@ body {font-family: Verdana, sans-serif; margin:0}
 
 
     }
-    .page4 h1{
-        margin-top: 10vh;
+
+    .page4 h1 {
+        margin-top: 20vh;
         text-align: center;
 
 
@@ -507,6 +567,78 @@ body {font-family: Verdana, sans-serif; margin:0}
 
     }
 
+    .page5 {
+        box-sizing: border-box;
+        min-height: 100vh;
+        height: 100vh;
+        padding: 2vw 0 5vw;
+        position: relative;
+        transform-style: inherit;
+        width: 100%;
+        text-align: center;
+        padding-left: 10vw;
 
-}
+
+    }
+
+    .page5 h1 {
+        margin-top: 20vh;
+        text-align: center;
+
+
+    }
+
+    .slides5 {
+        padding-top: 10vw;
+        width: 60%;
+
+    }
+
+    /* The navigation bar */
+    .navbar {
+        overflow: hidden;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0px; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+        display: block;
+        margin-top: 9vh;
+    }
+
+    /* Links inside the navbar */
+    .navbar a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: "Gilroy ExtraBold" ;
+    }
+
+    /* Change background on mouse-over */
+    .navbar a:hover {
+        color: white;
+    }
+
+    .topnav a.icon{
+        display: none;
+    }
+
+    #myBtn{
+        right: 4vh;
+    }
+    .next {
+        position: absolute;
+        right: 45vh;
+        border-radius: 3px 0 0 3px;
+        margin-left: 18vh;
+    }
+    .prev {
+        position: absolute;
+        left: -2vh;
+        border-radius: 3px 0 0 3px;
+    }
+
+    }
+
 

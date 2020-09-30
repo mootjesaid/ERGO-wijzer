@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8664acd4-0c8f-42d0-a77b-2408392fa46b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java.js" beforeDir="false" afterPath="$PROJECT_DIR$/java.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +35,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/xampp/htdocs/lessen" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -67,7 +70,13 @@
       <workItem from="1591722751870" duration="2432000" />
       <workItem from="1592413131969" duration="19611000" />
       <workItem from="1592689414198" duration="29685000" />
-      <workItem from="1593014685506" duration="3204000" />
+      <workItem from="1593014685506" duration="5805000" />
+      <workItem from="1593190876849" duration="190000" />
+      <workItem from="1593590718315" duration="25387000" />
+      <workItem from="1596323307434" duration="3034000" />
+      <workItem from="1597442507793" duration="969000" />
+      <workItem from="1598516187231" duration="55000" />
+      <workItem from="1598528870127" duration="11049000" />
     </task>
     <servers />
   </component>
